@@ -80,7 +80,7 @@ func generateRandomString(length int) (string, error) {
 		return "", err
 	}
 
-	return base64.StdEncoding.EncodeToString(b)[0:length], nil
+	return base64.URLEncoding.EncodeToString(b)[0:length], nil
 }
 
 // ensure elements in input array are unique
